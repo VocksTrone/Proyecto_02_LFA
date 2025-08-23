@@ -1,0 +1,38 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# === Entornos virtuales ===
+venv/
+env/
+.venv/
+.env/
+
+# === Configuración del editor ===
+.vscode/
+.idea/
+
+# === Archivos temporales del sistema ===
+.DS_Store
+Thumbs.db
+
+# === Logs y archivos temporales ===
+*.log
+*.tmp
+
+# === Pruebas y cobertura ===
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+
+# === Archivos de Jupyter ===
+.ipynb_checkpoints/
+
+# === Build y distribución ===
+*.egg-info/
+*.egg
+dist/
+build/
