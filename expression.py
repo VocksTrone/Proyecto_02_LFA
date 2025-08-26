@@ -7,15 +7,14 @@ class Expression:
     def normalize(self, expression: str) -> str:
         expression = expression.replace(" ", "")
         expression = expression.replace("·", "*")
-        expression = expression.replace("+", "+")
         return expression
 
     def validate(self) -> bool:
-        expression = self.expression
-        if not re.fullmatch(r"[A-Z0-9\+\*\(\)']+", expression):
+        if not re.fullmatch(r"(?:[A-Z]|0|1|'|\(|\)|\+|\*)+", self.expression):
             return False
+        # Verifica paréntesis balanceados
         stack = []
-        for char in expression:
+        for char in self.expression:
             if char == "(":
                 stack.append(char)
             elif char == ")":
